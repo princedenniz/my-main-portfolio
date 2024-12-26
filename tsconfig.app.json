@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                 // Keeps backward compatibility for older browsers
+    "lib": ["dom", "esnext"],                        // Includes both DOM and modern ECMAScript libraries
+    "jsx": "react-jsx",                              // For React 17 and newer JSX transformation
+    "module": "esnext",                              // Uses the latest ES module system
+    "moduleResolution": "node",                      // Ensures Node-style module resolution
+    "esModuleInterop": true,                         // Allows default imports from CommonJS modules
+    "skipLibCheck": true,  
+    "typeRoots": ["./node_modules/@types", "./types"],                          // Skips type checking of declaration files
+    "strict": true,                                  // Enables all strict type-checking options (recommended)
+    "noImplicitAny": true,                           // Prevents the usage of `any` type
+    "resolveJsonModule": true,                       // Allows importing JSON files as modules
+    "isolatedModules": true,                         // Ensures that each file can be safely transpiled independently
+    "allowJs": true,                                 // Allows JavaScript files to be imported
+    "checkJs": false                                 // Disables type-checking for JavaScript files (you can enable this if you want to check JS files)
+  },
+  "include": [
+    "src/**/*"                                       // Ensures the `src` folder is included in the compilation
+  ],
+  "exclude": [
+    "node_modules",                                  // Excludes `node_modules` folder to speed up compilation
+    "build",                                         // Excludes the build folder, in case you have a build directory
+    "dist"                                           // Excludes dist if you are using it for production files
+  ]
+}
+
+
